@@ -1,0 +1,7 @@
+
+In order to use the program, and test mymalloc and myfree
+call those functions in the main function of memManager.c
+after running the executable ./memManager. There will be a 
+binary textfile called memMap. View that file to look at 
+the memory allocations that happened.
+

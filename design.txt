@@ -1,0 +1,13 @@
+For this project I have made an  interesting design decision. For one when mymalloc is called, I simply keep on splitting the one free chunk at the end of the list, only if there is no available exact chunk.
+If there is a free chunk  available of the exact size then mymalloc will allocate that space and mark that chunk as used.
+
+My justification for this is because it makes the memory map more neat. It will be easier to follow how the chunk is being split.
+
+
+freeHelper.c contains helper functions that are essential for myFree
+mallocHelper.c conttains helper functions that are essential for myMalloc
+
+memManager.c has the functions myMalloc and myFree they make use of the helper functions.
+in this file. It contains a test function where the user has the ability to make myMalloc and myFree calls
+
+

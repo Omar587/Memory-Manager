@@ -1,0 +1,18 @@
+
+testing function is withtin memManager.c
+
+
+In terms of testing, i decided to write multiple myfree/mymalloc calls into a single file. Like i mentioned in my design.txt document. 
+It is not difficult to follow what happens in the memory map despite all the multiple writes into the binary file MemMap. I believe 
+this was the most realistic way to test the program because when memory allocation happens there will be multiple calls during the lifetime of the program. So this large test is supposed to replicate this.
+
+My testing strategy was documented in the in my test function, basically i tried to allocate memory of varying sizes, i tried to malloc more memory than what is available this led to an error message.
+
+After i made many memory allocations i started to free memory,  i tested situations where chunks were coalesced if there were neighbouring free chunks. 
+I tested situations where there were no free chunk neighbours. So the current used chunk is set to free.
+After some frees were made, I tested allocating memory into the free space.
+
+if the user wants to view the memory map , then xxd memMap.  
+
+
+
